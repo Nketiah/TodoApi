@@ -1,10 +1,9 @@
-import { User } from "@prisma/client"
 import { NextFunction, Response, Request } from "express"
 import { emailExist } from "../helpers/emailExist"
 import { catchException } from "../helpers/errorHandler"
 import { sendCookieToken } from "../helpers/sendCookieToken "
 import { validEmail } from "../helpers/validation"
-import { prisma } from "../prisma"
+import { prisma, User } from "../prisma"
 
 
 
