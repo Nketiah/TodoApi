@@ -3,7 +3,7 @@ import { emailExist } from "../helpers/emailExist"
 import { catchException } from "../helpers/errorHandler"
 import { sendCookieToken } from "../helpers/sendCookieToken "
 import { validEmail } from "../helpers/validation"
-import { prisma, User } from "../prisma"
+import { prisma} from "../prisma"
 
 
 
@@ -12,7 +12,7 @@ import { prisma, User } from "../prisma"
 // @access  Public
 export const register = async (req: Request, res: Response, next: NextFunction) => {
     try {
-          const { fullname,email,mobile,password,role} = req.body as User
+          const { fullname,email,mobile,password,role} = req.body as any
           if(!validEmail(email)){
             return next(res.status(400).json({message: "Invalid Email"}))
           }
