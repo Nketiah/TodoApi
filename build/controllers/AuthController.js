@@ -15,7 +15,7 @@ const errorHandler_1 = require("../helpers/errorHandler");
 const sendCookieToken_1 = require("../helpers/sendCookieToken ");
 const validation_1 = require("../helpers/validation");
 const prisma_1 = require("../prisma");
-// @desc    Register user
+// @desc    Register user 
 // @route   POST /api/v1/auth/register
 // @access  Public
 const register = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
@@ -50,3 +50,4 @@ const logout = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     //
 });
 exports.logout = logout;
+const name = "";
