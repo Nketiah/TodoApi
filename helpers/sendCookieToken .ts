@@ -1,8 +1,8 @@
-import { User } from "@prisma/client"
+//import { User } from "@prisma/client"
 import { Response } from "express"
 import { generateToken } from "./generateToken"
 
-export const sendCookieToken = (user: User, res: Response) => {
+export const sendCookieToken = (user: any, res: Response) => {
     const token = generateToken(user.id, "1d")
     const options = {
         //expires: new Date(Date.now() + 60 * 60 * 1000),    1 hour
